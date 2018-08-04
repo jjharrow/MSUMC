@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="org.mainstreet-umc.app" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Main Street Church</name>
+    <description>
+        Main Street United Methodist Church worship information app.
+    </description>
+    <author email="Administrator@mainstreet-umc.org" href="http://www.mainstreet-umc.org">
+        Jerry J. Harrow
+    </author>
+    <content src="index.html" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="14" />
+	
+	<!-- Disable splash screen since logo is already displaying -->
+	<preference name="SplashScreenDelay" value="0"/>
+    <preference name="FadeSplashScreenDuration" value="0"/>
+	
+	<!--
+    <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
+    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
+    <plugin name="cordova-plugin-media-capture" source="npm" spec="~1.2.0" />
+    <plugin name="cordova-plugin-console" source="npm" spec="~1.0.2" />
+    <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
+    <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
+    <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
+    <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2" />
+    <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.2.0" />
+    <plugin name="cordova-plugin-file" source="npm" spec="~4.1.1" />
+    <plugin name="cordova-plugin-file-transfer" source="npm" spec="~1.5.0" />
+    <plugin name="cordova-plugin-geolocation" source="npm" spec="~2.1.0" />
+    <plugin name="cordova-plugin-globalization" source="npm" spec="~1.0.3" />
+    
+    <plugin name="cordova-plugin-media" source="npm" spec="~2.2.0" />
+    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
+    <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
+    <plugin name="cordova-plugin-statusbar" source="npm" spec="~2.1.2" />
+    <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
+	<plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
+	-->
+    <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
+	<plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
+    <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1" />
+    <platform name="android">
+	<icon density="ldpi" src="res/icons/android/icon-36-ldpi.png"/>
+	<icon density="mdpi" src="res/icons/android/icon-48-mdpi.png"/>
+	<icon density="hdpi" src="res/icons/android/icon-72-hdpi.png"/>
+	<icon density="xhdpi" src="res/icons/android/icon-96-xhdpi.png"/>
+	<icon density="xxhdpi" src="res/icons/android/icon-144-xxhdpi.png"/>
+	<icon density="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png"/>
+    </platform>
+    <platform name="ios">
+	<icon src="res/icons/ios/icon-small.png" width="29" height="29"/>
+	<icon src="res/icons/ios/icon-small@2x.png" width="58" height="58"/>
+	<icon src="res/icons/ios/icon-40.png" width="40" height="40"/>
+	<icon src="res/icons/ios/icon-40@2x.png" width="80" height="80"/>
+	<icon src="res/icons/ios/icon-50.png" width="50" height="50"/>
+	<icon src="res/icons/ios/icon-50@2x.png" width="100" height="100"/>
+	<icon src="res/icons/ios/icon.png" width="57" height="57"/>
+	<icon src="res/icons/ios/icon@2x.png" width="114" height="114"/>
+	<icon src="res/icons/ios/icon-60.png" width="60" height="60"/>
+	<icon src="res/icons/ios/icon-60@2x.png" width="120" height="120"/>
+	<icon src="res/icons/ios/icon-60@3x.png" width="180" height="180"/>
+	<icon src="res/icons/ios/icon-72.png" width="72" height="72"/>
+	<icon src="res/icons/ios/icon-72@2x.png" width="144" height="144"/>
+	<icon src="res/icons/ios/icon-76.png" width="76" height="76"/>
+	<icon src="res/icons/ios/icon-76@2x.png" width="152" height="152"/>
+	<icon src="res/icons/ios/icon-167.png" width="167" height="167"/>
+	<icon src="res/icons/ios/icon-83.5@2x.png" width="167" height="167"/>
+    </platform>
+    <platform name="wp8">
+    </platform>
+    <platform name="windows">
+	<icon src="res/icons/windows/storelogo.png" target="StoreLogo"/>
+	<icon src="res/icons/windows/smalllogo.png" target="Square30x30Logo"/>
+	<icon src="res/icons/windows/Square44x44Logo.png" target="Square44x44Logo"/>
+	<icon src="res/icons/windows/Square70x70Logo.png" target="Square70x70Logo"/>
+	<icon src="res/icons/windows/Square71x71Logo.png" target="Square71x71Logo"/>
+	<icon src="res/icons/windows/Square150x150Logo.png" target="Square150x150Logo"/>
+	<icon src="res/icons/windows/Square310x310Logo.png" target="Square310x310Logo"/>
+    </platform>
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+    <platform name="ios">
+        <allow-intent href="itms:*" />
+        <allow-intent href="itms-apps:*" />
+    </platform>
+</widget>

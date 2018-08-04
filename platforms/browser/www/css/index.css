@@ -1,0 +1,319 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+	overflow: hidden;							/* Suppress scrollbar */
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+}
+
+html {
+	background: url(../img/Portrait.jpg) no-repeat top center;
+	background-size: cover;	
+	height: 100%;
+	margin:0px;
+    padding:0px;
+}
+
+
+/* Portrait layout (default) */
+.app {
+    position:absolute;             /* position in the center of the screen */
+	width: 100%;
+	bottom: 40px;
+}
+.webInfo {
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+	html {
+		background:url(../img/Landscape.jpg) no-repeat center top;
+		background-size: cover;	
+	}
+    .app {
+		text-align:left;
+		bottom: 20px;
+    }
+	.webInfo {
+		padding-top: 1px;
+		padding-bottom: 1px;
+	}
+}
+
+#contacts {
+	text-align:center;
+}
+#about {
+	text-align:center;
+}
+
+h1 {
+    font-size:24px;
+	color: red;
+    font-weight:normal;
+    margin:5px;
+    overflow:visible;
+    padding:5px;
+    text-align:center;
+}
+
+footer {
+	clear: both;
+	color:#FFFFFF;
+	background-color: red;
+	position: fixed;
+	z-index: 10;
+	height: 3em;
+	margin-top: -3em;
+	bottom: 0;
+	width:100%;
+}
+
+.link {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+	background-color:#336699;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:4px 30px;
+    padding:2px 0px;
+}
+
+.event {
+	display:block;
+	padding: 20px 80px;
+	margin: 20px;
+	vertical-align: middle;
+	width: 50%;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:36px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 4px 24px;
+	margin: 8px;
+    border: 1px solid #2b5680;
+    border-radius: 8px;
+    background: #52a2f0;
+    background: -webkit-gradient(linear, left top, left bottom, from(#52a2f0), to(#2b5680));
+    background: -moz-linear-gradient(top, #52a2f0, #2b5680);
+    background: linear-gradient(to bottom, #52a2f0, #2b5680);
+    text-shadow: #1a334b 1px 1px 1px;
+    font: normal normal bold 20px arial;
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:hover,
+.button:focus {
+    border: 1px solid #336596;
+    background: #62c2ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#62c2ff), to(#34679a));
+    background: -moz-linear-gradient(top, #62c2ff, #34679a);
+    background: linear-gradient(to bottom, #62c2ff, #34679a);
+    color: #ffffff;
+    text-decoration: none;
+}
+.button:active {
+    background: #2b5680;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2b5680), to(#2b5680));
+    background: -moz-linear-gradient(top, #2b5680, #2b5680);
+    background: linear-gradient(to bottom, #2b5680, #2b5680);
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+ 
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+/* STAFF table formatting */
+#staff {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#staff td, #staff th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+#staff tr:nth-child(even){background-color: #f2f2f2;}
+
+#staff tr:hover {background-color: #ddd;}
+
+#staff th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+#staff p {
+	padding-top: 2px;
+    padding-bottom: 0px;
+	color: grey;
+	margin: 0px;
+}
+
+
+/** Side navigation (unused) */
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+/**
+** Bottom Navigation
+*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+	position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: #111;
+}
+
+.active {
+    background-color: red;
+}
+
+/**
+* PAGE content
+*/
+.page-content {
+    left: 0;
+	padding: 0;
+	margin: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.content-block {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 0px;
+    border: 1px solid #888;
+    width: 95%; /* Could be more or less, depending on screen size */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+	.content-block  {
+		margin: 5px auto;
+	}
+}
