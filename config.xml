@@ -79,6 +79,11 @@
 	<icon src="res/icons/windows/Square310x310Logo.png" target="Square310x310Logo"/>
     </platform>
     <access origin="*" />
+	<allow-navigation href="https://drive.google.com/file/d/1cHg9lyEpvCsstQZ3vltzHivTrJ0RlZfU/view" />
+	<allow-navigation href="http://www.mainstreet-umc.org/giving" />
+	<allow-navigation href="https://drive.google.com/open?id=0B23SbhaVibvHUnNsUG1ZTjhYMkE" />
+	<allow-navigation href="http://app.mainstreet-umc.org" />
+	<allow-navigation href="http://news.mainstreet-umc.org" />	
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />
