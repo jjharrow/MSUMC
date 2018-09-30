@@ -8,8 +8,9 @@
         Jerry J. Harrow
     </author>
     <content src="index.html" />
+    <icon src="icon.png" />
     <access origin="*" />
-    <allow-navigation href="https://drive.google.com/file/d/18zBlBdDk_JhaX05K1inCwiz9Hj1F1gOO/view" />
+    <allow-navigation href="https://drive.google.com/file/d/1cHg9lyEpvCsstQZ3vltzHivTrJ0RlZfU/view" />
     <allow-navigation href="http://www.mainstreet-umc.org/giving" />
     <allow-navigation href="https://drive.google.com/open?id=0B23SbhaVibvHUnNsUG1ZTjhYMkE" />
     <allow-navigation href="http://app.mainstreet-umc.org" />
