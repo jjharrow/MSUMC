@@ -15,6 +15,9 @@
         },
         "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "org.mainstreet-umc.app"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "org.mainstreet-umc.app"
         }
     },
     "dependent_plugins": {}

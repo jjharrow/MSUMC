@@ -49,6 +49,18 @@ var app = {
     }
 };
 
+function openUrl(url) {
+	if (device.platform == 'iOS') {
+		openType = '_system';
+		if (url.includes("drive.google.com"))  {
+			openType='_blank';
+		}
+		cordova.InAppBrowser.open(url, openType, 'location=yes');
+	} else {
+		window.open(url);
+	}
+}
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }

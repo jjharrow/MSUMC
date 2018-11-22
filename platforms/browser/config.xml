@@ -1,5 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.mainstreet-umc.app" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="org.mainstreet-umc.app" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
     <name>Main Street Church</name>
     <description>
         Main Street United Methodist Church worship information app.
@@ -9,7 +12,7 @@
     </author>
     <content src="index.html" />
     <icon src="icon.png" />
-    <access origin="*" />
+    <access allows-arbitrary-loads-for-media="true" allows-arbitrary-loads-in-web-content="true" allows-local-networking="true" origin="*" />
     <allow-navigation href="https://drive.google.com/file/d/1cHg9lyEpvCsstQZ3vltzHivTrJ0RlZfU/view" />
     <allow-navigation href="http://www.mainstreet-umc.org/giving" />
     <allow-navigation href="https://drive.google.com/open?id=0B23SbhaVibvHUnNsUG1ZTjhYMkE" />
@@ -22,7 +25,8 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <preference name="DisallowOverscroll" value="true" />
-    <preference name="android-minSdkVersion" value="14" />
+    <preference name="android-minSdkVersion" value="26" />
     <preference name="SplashScreenDelay" value="0" />
+    <preference name="SplashScreen" value="/img/icon.png" />
     <preference name="FadeSplashScreenDuration" value="0" />
 </widget>

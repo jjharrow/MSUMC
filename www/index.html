@@ -1,24 +1,4 @@
 <!DOCTYPE html>
-<!--
-    Copyright (c) 2012-2016 Adobe Systems Incorporated. All rights reserved.
-
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
 
 <head>
@@ -26,16 +6,7 @@
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
     <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
-    <!-- Good default declaration:
-    * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
-    * http://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
-    * Disables use of eval() and inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
-        * Enable inline JS: add 'unsafe-inline' to default-src
-        * Enable eval(): add 'unsafe-eval' to default-src
-    * Create your own at http://cspisawesome.com
-    -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' http://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" /> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: 'unsafe-inline' http://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
 
     <link rel="stylesheet" type="text/css" href="css/index.css" />
     <title>Main Street United Methodist Church</title>
@@ -59,11 +30,11 @@
         </div>
 		
 		<div id="links" style='display:none;'>
-		<a class="button" href="https://drive.google.com/file/d/1cHg9lyEpvCsstQZ3vltzHivTrJ0RlZfU/view">Today's Order of Worship</a><br>
-		<a class="button" href="http://www.mainstreet-umc.org/giving">My Offering</a><br>
-		<a class="button" href="https://drive.google.com/open?id=0B23SbhaVibvHUnNsUG1ZTjhYMkE">Weekly Announcements</a> <br>
-		<a class="button" href="http://app.mainstreet-umc.org">Calendar of Events</a> <br>
-		<a class="button" href="http://news.mainstreet-umc.org" onclick="window.open('http://news.mainstreet-umc.org')">Online Mainstreeter News</a><br>
+		<a class="button" onclick="openUrl('https://drive.google.com/file/d/1cHg9lyEpvCsstQZ3vltzHivTrJ0RlZfU/view')">Today's Order of Worship</a><br>
+		<a class="button" onclick="openUrl('http://www.mainstreet-umc.org/giving')">My Offering</a><br>
+		<a class="button" onclick="openUrl('https://drive.google.com/open?id=0B23SbhaVibvHUnNsUG1ZTjhYMkE')">Weekly Announcements</a> <br>
+		<a class="button" onclick="openUrl('http://app.mainstreet-umc.org')">Calendar of Events</a> <br>
+		<a class="button" onclick="openUrl('http://news.mainstreet-umc.org')">Online Mainstreeter News</a><br>
 		</div>
     </div>
 
@@ -71,43 +42,36 @@
 		 <div class="page-content">
             <div class="content-block">
 				<h3>
-				<a href="http://www.google.com/maps/place/Main+Street+United+Methodist+Church/@42.7612602,-71.4649502,20z/data=!4m5!3m4!1s0x89e3b0d81eee1527:0x299997e19ca697bf!8m2!3d42.7612602!4d-71.4649502">154 Main St, Nashua, NH</a>
+				<a href=http://www.google.com/maps/place/Main+Street+United+Methodist+Church/@42.7612602,-71.4649502,20z/data=!4m5!3m4!1s0x89e3b0d81eee1527:0x299997e19ca697bf!8m2!3d42.7612602!4d-71.4649502'
+				   onclick="openUrl('http://www.google.com/maps/place/Main+Street+United+Methodist+Church/@42.7612602,-71.4649502,20z/data=!4m5!3m4!1s0x89e3b0d81eee1527:0x299997e19ca697bf!8m2!3d42.7612602!4d-71.4649502')">154 Main St, Nashua, NH</a>
 				</h3>
 				
 				<p class="webInfo">
-                <a href="tel:1-603-882-3361">(603)882-3361</a> 
-				&#9866 <a href="mailto:office@mainstreet-umc.org">office@mainstreet-umc.org</a>
-				&#9866 <a href="http://www.facebook.com/mainstreetunitedmethodistchurch/" ><img height="20px" src="./img/FB-fLogo-Blue-broadcast-2.png"></a>
-				<a href="http://plus.google.com/114252683997510499215" >
-				<img height="20px" src="./img/Logo_google+_2015.png"></a>
-                <a href="http://www.mainstreet-umc.org"><img height="20px" src="./img/icon.png"></a></a>
+                <a href='tel:1-603-882-3361' onclick="openUrl('tel:1-603-882-3361')">(603)882-3361</a> 
+				&#9866 <a href="www.mainstreet-umc.org" onclick="openUrl('http://www.mainstreet-umc.org')">www.mainstreet-umc.org</a></a>
+				&#9866 <a onclick="openUrl('http://www.facebook.com/mainstreetunitedmethodistchurch/')" ><img height="20px" src="./img/FB-fLogo-Blue-broadcast-2.png"></a>
 				</p>
 				
 				<table id="staff">
 				<tr>
                  <td>Rev. Richard A. Cullen
 				 <p class="role">Pastor</p></td>
-                 <td><a href="mailto:Rich.Cullen@mainstreet-umc.org"> Rich.Cullen@mainstreet-umc.org</a></td>
+                 <td><a href="mailto:Rich.Cullen@mainstreet-umc.org" onclick="openUrl('mailto:Rich.Cullen@mainstreet-umc.org')"> Rich.Cullen@mainstreet-umc.org</a></td>
 				</tr>
                 <tr>
 				<td>Pam Axtell
 				<p class="role">Administrative Assistant</p></td>
-				<td><a href="mailto:office@mainstreet-umc.org"> office@mainstreet-umc.org</a></td>
-				</tr>
-                <tr>
-				<td>Kathy Whitman 
-				<p class="role">Director of Christian Education</p></td>
-				<td><a href="mailto:dce@mainstreet-umc.org"> dce@mainstreet-umc.org</a></td>
+				<td><a href='mailto:office@mainstreet-umc.org' onclick="openUrl('mailto:office@mainstreet-umc.org')"> office@mainstreet-umc.org</a></td>
 				</tr>
                 <tr>
 				<td>Julie Oliver
 				<p class="role">Director of Music</p></td>
-                <td><a href="mailto:julieoliver.nh@gmail.com"> julieoliver.nh@gmail.com</a></td>
+                <td><a href="mailto:julieoliver.nh@gmail.com" onclick="openUrl('mailto:julieoliver.nh@gmail.com')"> julieoliver.nh@gmail.com</a></td>
 				</tr>
                 <tr>
 				<td>Mainstreeter
 				<p>Newsletter submissions</p></td>
-                 <td><a href="mailto:mainstreeter@mainstreet-umc.org"> mainstreeter@mainstreet-umc.org</a></td>
+                 <td><a href="mailto:mainstreeter@mainstreet-umc.org" onclick="openUrl('mailto:mainstreeter@mainstreet-umc.org')"> mainstreeter@mainstreet-umc.org</a></td>
 				 </tr>
 				</table>
             </div>
@@ -117,9 +81,9 @@
 	<div id="about" class="app" style='display:none;bottom:25px;'>
 		<div class="page-content">
             <div class="content-block">
-			<h2>Main Street United Methodist Church <br>Worship App V1.0.3</h2>
+			<h2>Main Street United Methodist Church <br>Worship App V1.0.4</h2>
 			<p><p>
-			Questions or Feedback? <a href="mailto:Administrator@mainstreet-umc.org"> Administrator@mainstreet-umc.org</a></p>		
+			Questions or Feedback? <a href="mailto:Administrator@mainstreet-umc.org" onclick="openUrl('mailto:Administrator@mainstreet-umc.org')"> Administrator@mainstreet-umc.org</a></p>		
 			<P>
 			Copyright &#169 2018, Main Street United Methodist Church
 			</div>
