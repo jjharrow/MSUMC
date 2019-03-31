@@ -17,6 +17,9 @@
 	<preference name="SplashScreen" value="/img/icon.png" />
     <preference name="FadeSplashScreenDuration" value="0"/>
 	
+	<!-- Needed to enable 1024 icon for IOS App Store -->
+	<preference name="phonegap-version" value="cli-7.1.0" />
+	
 	<!--
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
     <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
