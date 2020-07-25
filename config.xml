@@ -54,6 +54,9 @@
 	<icon density="xhdpi" src="res/icons/android/icon-96-xhdpi.png"/>
 	<icon density="xxhdpi" src="res/icons/android/icon-144-xxhdpi.png"/>
 	<icon density="xxxhdpi" src="res/icons/android/icon-192-xxxhdpi.png"/>
+		<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+			<application android:usesCleartextTraffic="true" />
+		</edit-config>
     </platform>
     <platform name="ios">
 	<icon src="res/icons/ios/icon-small.png" width="29" height="29"/>
@@ -74,8 +77,6 @@
 	<icon src="res/icons/ios/icon-167.png" width="167" height="167"/>
 	<icon src="res/icons/ios/icon-83.5@2x.png" width="167" height="167"/>
     <icon src="res/icons/ios/icon-1024.png" width="1024" height="1024"/>
-    </platform>
-    <platform name="wp8">
     </platform>
     <platform name="windows">
 	<icon src="res/icons/windows/storelogo.png" target="StoreLogo"/>
